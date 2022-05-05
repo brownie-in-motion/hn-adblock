@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="popup.js"></script>
+        <style>
+            body {
+                width: calc(20ch + 2em);
+            }
+
+            button {
+                width: 20ch;
+                height: 2em;
+            }
+
+            .container {
+                display: grid;
+                place-items: center;
+                padding: 1em;
+            }
+
+            .stack {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="stack">
+                <button id="enable"></button>
+                <button id="renumber"></button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "name": "HN Adblock",
+    "description": "Hides ads on https://news.ycombinator.com/",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": ["https://news.ycombinator.com/*"],
+            "run_at": "document_start",
+            "js": ["contentScript.js"]
+        }
+    ],
+    "action": {
+        "default_title": "HN Adblock Settings",
+        "default_popup": "index.html"
+    }
+}
