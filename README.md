@@ -3,6 +3,8 @@
 A Chrome extension that removes "[company] is hiring" ads on
 https://news.ycombinator.com/.
 
+Note: I do not read the orange site. This was motivated entirely by boredom.
+
 ## Extension
 
 To add the extension to Chrome, visit
