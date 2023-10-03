@@ -28,11 +28,14 @@ following user script should work instead:
 // whether to re-number the posts after the removed ads
 const FIX_NUMBERING = false;
 
-[...(document.querySelector('table.itemList')?.rows ?? [])]
-  .reduce((a, _r, i, rows) => (i % 3 ? a : [...a, rows.slice(i, i + 3)]), [])
-  .filter((row) => row.length === 3)
-  .filter(([title]) => !title.querySelector('td.votelinks'))
-  .forEach((rows) => rows.forEach((row) => row.remove()));
+// Select all table rows with class "athing"
+const rows = document.querySelectorAll('tr.athing');
+
+// Filter rows that do not contain td.votelinks
+const filteredRows = [...rows].filter((row) => !row.querySelector('td.votelinks'));
+
+// Remove the filtered rows from the page
+filteredRows.forEach((row) => row.remove());
 
 if (FIX_NUMBERING) {
   document
